@@ -1,0 +1,42 @@
+declare namespace file="http://expath.org/ns/file";
+file:write("C:/Users/Usuario/Desktop/index.html", $HTML,)
+    <html>
+        <head>
+        <title>Exoplanetas</title>
+        </head>
+        <body>
+        <header>
+            <h1>Exoplanetas</h1>
+        </header>
+        <main>
+            <section>
+            <h1>Lista de Exoplanetas habitables</h1>
+            <ul>
+                {for $p in //DeepSpaceInventory/Exoplaneta
+                    where $p/TemperaturaMedia > 10 and $p/TemperaturaMedia < 35
+                return
+                <li>  
+                {$p/NombreComun/text()}
+                </li>
+                }
+            </ul>
+            </section>
+            <section>
+                <h1> Ranking de Exoplanetas cercanos a la Tierra con presencia de O2</h1>
+                <ol>
+                    {for $p in //DeepSpaceInventory/Exoplaneta
+                        where $p/Atmosfera/Componente = "Oxígeno"
+                        order by $p/DistanciaAniosLuz ascending
+                    return
+                    <li>
+                    {$p/NombreComun/text()}
+                    </li>
+                    }
+                </ol>
+            </section>
+            <section>
+
+            </section>
+        </main>
+        </body>
+    </html>
