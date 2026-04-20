@@ -28,7 +28,6 @@ return
     
     (:
     CONSULTA 3
-    
     Generador de "Ficha de Navegación" para un planeta concreto, extrayendo su composición.
     :)
       
