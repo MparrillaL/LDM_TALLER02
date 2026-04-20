@@ -1,5 +1,5 @@
 declare namespace file="http://expath.org/ns/file";
-file:write("C:/Users/Usuario/Desktop/index.html", $HTML,)
+let $HTML :=
     <html>
         <head>
         <title>Exoplanetas</title>
@@ -40,3 +40,5 @@ file:write("C:/Users/Usuario/Desktop/index.html", $HTML,)
         </main>
         </body>
     </html>
+    return 
+    file:write("C:/Users/Usuario/Desktop/index.html", $HTML)
