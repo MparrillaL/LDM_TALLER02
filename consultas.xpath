@@ -32,7 +32,5 @@ return
     Generador de "Ficha de Navegación" para un planeta concreto, extrayendo su composición.
     :)
       
-    for $p in //DeepSpaceInventory/Exoplaneta
-      where $p/Atmosfera/Componente = "Oxígeno"
-      order by $p/DistanciaAniosLuz ascending
-    return $p/NombreComun/text()
+      
+ 

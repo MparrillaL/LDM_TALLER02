@@ -2,7 +2,10 @@ declare namespace file="http://expath.org/ns/file";
 let $HTML :=
     <html>
         <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Exoplanetas</title>
+        <link rel="stylesheet" href="styles.css">
         </head>
         <body>
         <header>
@@ -35,10 +38,55 @@ let $HTML :=
                 </ol>
             </section>
             <section>
+                <table>
+            <caption>Galería de Exoplanetas Habitables</caption>
+            <thead>
+                <tr>
+                    <th>Nombre del Exoplaneta</th>
+                    <th>Vista Visual</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Planeta 1 -->
+                <tr>
+                    <td>Gliese 581g</td>
+                    <td><img src="ruta/gliese581g.jpg" alt="Representación de Gliese 581g"></td>
+                </tr>
+                <!-- Planeta 2 -->
+                <tr>
+                    <td>Kepler-186f</td>
+                    <td><img src="ruta/kepler186f.jpg" alt="Representación de Kepler-186f"></td>
+                </tr>
+                <!-- Planeta 3 -->
+                <tr>
+                    <td>TRAPPIST-1e</td>
+                    <td><img src="ruta/trappist1e.jpg" alt="Representación de TRAPPIST-1e"></td>
+                </tr>
+                <!-- Planeta 4 -->
+                <tr>
+                    <td>Proxima Centauri b</td>
+                    <td><img src="ruta/proxima_b.jpg" alt="Representación de Proxima b"></td>
+                </tr>
+                <!-- Planeta 5 -->
+                <tr>
+                    <td>LHS 1140 b</td>
+                    <td><img src="ruta/lhs1140b.jpg" alt="Representación de LHS 1140 b"></td>
+                </tr>
+                <!-- Planeta 6 -->
+                <tr>
+                    <td>Teegarden's Star b</td>
+                    <td><img src="ruta/teegarden_b.jpg" alt="Representación de Teegarden b"></td>
+                </tr>
+            </tbody>
+        </table>
 
             </section>
         </main>
         </body>
+        <footer>
+            <p>github: <a href="https://github.com/MParrillaL">Datos obtenidos de la base de datos de exoplanetas</a></p>
+        </footer>
+
     </html>
     return 
     file:write("C:/Users/Usuario/Desktop/index.html", $HTML)
